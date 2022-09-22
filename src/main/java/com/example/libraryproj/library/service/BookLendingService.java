@@ -36,6 +36,7 @@ public class BookLendingService {
     }
 
 
+
     public Customer getUserByName(String name) throws Exception {
         Optional<Customer> customerOptional = library.getCustomers().stream().filter(customer -> customer.getName().equals(name)).findAny();
         if (!customerOptional.isPresent()) {

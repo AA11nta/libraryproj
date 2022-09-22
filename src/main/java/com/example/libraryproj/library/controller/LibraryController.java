@@ -1,6 +1,8 @@
 package com.example.libraryproj.library.controller;
 
 import com.example.libraryproj.library.entities.Book;
+import com.example.libraryproj.library.repos.BookRepository;
+import com.example.libraryproj.library.repos.CustomerRepository;
 import com.example.libraryproj.library.service.BookLendingService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +18,7 @@ public class LibraryController {
 
     @Autowired
     BookLendingService bookLendingService;
+
 
     @GetMapping(BASE_PATH + "/inventory")
     public String getAllTheBooks() {
